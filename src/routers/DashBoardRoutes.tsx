@@ -1,9 +1,10 @@
-import {Route, Routes} from "react-router-dom";
-import {Navbar} from "../components/ui/Navbar";
-import {MarvelScreen} from "../components/marvel/MarvelScreen";
-import {DcScreen} from "../components/dc/DcScreen";
-import {SearchScreen} from "../components/search/SearchScreen";
-import {HeroScreen} from "../components/heroes/HeroScreen";
+import {Route, Routes} from 'react-router-dom';
+import {Navbar} from '../components/ui/Navbar';
+import {MarvelScreen} from '../components/marvel/MarvelScreen';
+import {DcScreen} from '../components/dc/DcScreen';
+import {SearchScreen} from '../components/search/SearchScreen';
+import {HeroScreen} from '../components/heroes/HeroScreen';
+import {NotFound} from '../components/notfound/NotFound';
 
 export const DashBoardRoutes = () => {
 	return (
@@ -18,7 +19,7 @@ export const DashBoardRoutes = () => {
 					<Route path="hero/:id" element={<HeroScreen />} />
 
 					<Route path="/" element={<MarvelScreen />} />
-					<Route path="*" element={<MarvelScreen />} />
+					<Route path="*" element={<NotFound />} />
 				</Routes>
 			</div>
 		</>
