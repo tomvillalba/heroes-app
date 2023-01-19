@@ -29,11 +29,11 @@ export const SearchScreen = () => {
 			<hr />
 
 			<div className="row">
-				<div className="col-5">
+				<div className="col-12 col-sm-5">
 					<h4>Ingresa el nombre</h4>
 					<hr />
 
-					<form onSubmit={handleSearch}>
+					<form onSubmit={handleSearch} className="d-flex">
 						<input
 							type="text"
 							placeholder="Buscar un héroe"
@@ -54,7 +54,7 @@ export const SearchScreen = () => {
 					</form>
 				</div>
 
-				<div className="col-7">
+				<div className="col-12 mt-3 mt-sm-0 col-sm-7">
 					<h4>Resultados...</h4>
 					<hr />
 					{heroesFiltered.length ? (

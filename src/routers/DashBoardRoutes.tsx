@@ -11,7 +11,7 @@ export const DashBoardRoutes = () => {
 	return (
 		<>
 			<Navbar />
-			<div className="container-sm p-3 p-sm-0 mt-4">
+			<div className="container-sm p-3 p-sm-0 mt-2 mt-sm-4">
 				<Routes>
 					<Route path="marvel" element={<MarvelScreen />} />
 					<Route path="dc" element={<DcScreen />} />

@@ -21,8 +21,8 @@ export const HeroScreen = () => {
 	}
 
 	return (
-		<div className="row mt-5">
-			<div className="col-4">
+		<div className="row mt-1 mt-sm-5">
+			<div className="col-12 col-sm-4 mb-2">
 				<div>
 					<img
 						src={`/assets/${id}.jpg`}
@@ -30,16 +30,9 @@ export const HeroScreen = () => {
 						alt={hero.superhero}
 						style={{maxHeight: '70vh'}}
 					/>
-					<div>
-						<button
-							className="btn btn-outline-info mt-2"
-							onClick={handleReturn}>
-							Volver
-						</button>
-					</div>
 				</div>
 			</div>
-			<div className="col-8 animate__animated animate__fadeIn">
+			<div className="col-12 col-sm-8 animate__animated animate__fadeIn">
 				<h3>{hero.superhero}</h3>
 				<ul className="list-group list-group-flush">
 					<li className="list-group-item">
@@ -59,6 +52,13 @@ export const HeroScreen = () => {
 				<ul className="list-group list-group-flush">
 					<li className="list-group-item">- {hero.characters}</li>
 				</ul>
+			</div>
+			<div>
+				<button
+					className="btn btn-outline-info mt-2 mt-sm-0 mb-3"
+					onClick={handleReturn}>
+					Volver
+				</button>
 			</div>
 		</div>
 	);

@@ -56,7 +56,10 @@ export const Navbar = () => {
 					<Nav>
 						{!location.pathname.includes('/search') && (
 							<div className="navbar-nav">
-								<form className="nav-item nav-link" onSubmit={handleSubmit}>
+								<form
+									className="nav-item nav-link"
+									style={{minWidth: '35vw'}}
+									onSubmit={handleSubmit}>
 									<input
 										className="form-control me-2"
 										type="search"

@@ -1,5 +1,5 @@
-import {Hero, Publisher} from "../../data/heroes.d.js";
-import {Link} from "react-router-dom";
+import {Hero, Publisher} from '../../data/heroes.d.js';
+import {Link} from 'react-router-dom';
 
 export const HeroCard2 = ({
 	id,
@@ -14,23 +14,25 @@ export const HeroCard2 = ({
 		<div className="col animate__animated animate__fadeIn animate__faster">
 			<div className="card">
 				<div className="row no-gutter">
-					<div className="col-4">
+					<div className="col-7 col-sm-4">
 						<img src={imagePath} className="card-img" alt={superhero} />
 					</div>
-					<div className="col-8">
+					<div className="col-5 col-sm-8 card_body">
 						<div className="card-body">
 							<h5 className="card-title">{superhero}</h5>
 							<p className="card-text">{alter_ego}</p>
-							{alter_ego !== characters && <p className="card-text">{characters}</p>}
-							<p className="card-text">
+							{alter_ego !== characters && (
+								<p className="card-text card-desc">{characters}</p>
+							)}
+							<p className="card-text ">
 								<small className="text-muted">{first_appearance}</small>
 							</p>
 							<Link
 								to={`/hero/${id}`}
 								className={`btn ${
 									publisher === Publisher.MarvelComics
-										? "btn-outline-danger"
-										: "btn-outline-primary"
+										? 'btn-outline-danger'
+										: 'btn-outline-primary'
 								}`}>
 								More...
 							</Link>
