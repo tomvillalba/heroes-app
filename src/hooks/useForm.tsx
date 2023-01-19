@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useState} from 'react';
 
 export const useForm = (initialState = {}) => {
 	const [values, setValues] = useState(initialState);
@@ -7,7 +7,9 @@ export const useForm = (initialState = {}) => {
 		setValues(initialState);
 	};
 
-	const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+	const handleInputChange = (
+		event: React.ChangeEvent<HTMLInputElement>
+	): void => {
 		setValues({
 			...values,
 			[event.target.name]: event.target.value,

@@ -21,12 +21,14 @@ export const LoginScreen = () => {
 			payload: {name: name},
 		});
 
-		navigate('/marvel', {replace: true});
+		const ruta = localStorage.getItem('lastPath') || '/';
+
+		navigate(ruta, {replace: true});
 	};
 
 	return (
 		<div className="container mt-5">
-			<h1>LoginScreen</h1>
+			<h1>Ingresar:</h1>
 			<hr />
 			<form className="row" onSubmit={handleLogin}>
 				<div className="mb-2">

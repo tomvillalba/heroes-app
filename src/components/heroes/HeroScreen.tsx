@@ -1,6 +1,6 @@
-import {useParams, Navigate, useNavigate} from "react-router-dom";
-import {getHeroById} from "../../helpers/getHeroById";
-import {useMemo} from "react";
+import {useParams, Navigate, useNavigate} from 'react-router-dom';
+import {getHeroById} from '../../helpers/getHeroById';
+import {useMemo} from 'react';
 
 export const HeroScreen = () => {
 	const {id} = useParams();
@@ -12,7 +12,7 @@ export const HeroScreen = () => {
 		if (window.history.length > 2) {
 			navigate(-1);
 		} else {
-			hero?.publisher.includes("DC") ? navigate("/dc") : navigate("/marvel");
+			hero?.publisher.includes('DC') ? navigate('/dc') : navigate('/marvel');
 		}
 	};
 
@@ -23,15 +23,21 @@ export const HeroScreen = () => {
 	return (
 		<div className="row mt-5">
 			<div className="col-4">
-				<img
-					src={`/assets/${id}.jpg`}
-					className="img-thumbnail animate__animated animate__fadeInLeft"
-					alt={hero.superhero}
-					style={{maxHeight: "80vh"}}
-				/>
-				<button className="btn btn-outline-info mt-2" onClick={handleReturn}>
-					Volver
-				</button>
+				<div>
+					<img
+						src={`/assets/${id}.jpg`}
+						className="img-thumbnail animate__animated animate__fadeInLeft place-self-center "
+						alt={hero.superhero}
+						style={{maxHeight: '70vh'}}
+					/>
+					<div>
+						<button
+							className="btn btn-outline-info mt-2"
+							onClick={handleReturn}>
+							Volver
+						</button>
+					</div>
+				</div>
 			</div>
 			<div className="col-8 animate__animated animate__fadeIn">
 				<h3>{hero.superhero}</h3>
